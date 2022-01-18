@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
    name: {
       fontSize: 25,
       color: '#E3E3E3',
+      textShadowColor: '#000',
+      textShadowOffset: { width: 3, height: 3 },
+      textShadowRadius: 5
    },
    image: {
       width: 80,
