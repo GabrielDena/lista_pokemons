@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 // LIBRARIES
 import axios from 'axios';
+import { capitalizeFirstLetter } from '../functions'
 
 function PokemonListItem(props) {
    const pokemon = props.pokemon
@@ -18,7 +19,7 @@ function PokemonListItem(props) {
          })
    }, [])
 
-   let name = pokemon.name.replace(/(\b[a-z](?!\s))/g, function (name) { return name.charAt(0).toUpperCase() })
+   let name = capitalizeFirstLetter(pokemon.name)
 
    return (
       <View style={styles.option}>
