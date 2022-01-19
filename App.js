@@ -14,7 +14,7 @@ export default function App() {
 
    useEffect(async () => {
       await axios
-         .get('https://pokeapi.co/api/v2/pokemon?limit=12')
+         .get('https://pokeapi.co/api/v2/pokemon?limit=12&offset=500')
          .then(response => {
             const { results } = response.data
             setPokemons(results)
